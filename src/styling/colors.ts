@@ -1,4 +1,6 @@
-export const colors: Record<string, String> = {
+export const colors = {
   darkgray: "#121212",
-  white: "#FFFFFF"
+  lightgray: "#636363",
+  vanilla: "#F9F7F5",
+  white: "#FFFFFF",
 };

@@ -15,5 +15,7 @@ const styledTypography = (styling: string) => {
 }
 
 export const BaseText = styledTypography(styles.baseText);
+export const Small = styledTypography(styles.small);
+export const Heading = styledTypography(styles.heading);
 
 
