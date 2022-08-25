@@ -14,7 +14,7 @@ export const Timeline: React.FC<TimelineProps> = ({
   selected,
   setSelected
 }) => {
-  const MIN_SWIPE_DISTANCE = 100;
+  const MIN_SWIPE_DISTANCE = 60;
 
   const childrenCount = Children.count(children);
   const [lastTouchX, setlastTouchX] = useState<number | undefined>(undefined);
