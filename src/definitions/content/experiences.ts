@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
   {
     title: "Undergraduate Research Assistant",
     context: "MPMG/PCA Project",
-    date: "04/21 - 03/21",
+    date: "04/21 - ongoing",
     description: "Scientific Initiation research program in the Analytical Capacities Program, a partnership between DCC/UFMG and GSI/MPMG. Work done contemplates Natural Language Processing models, Python software development and writing of an academic paper.",
     skills: [skills.Python, skills.NaturalLanguageProcessing]
   },

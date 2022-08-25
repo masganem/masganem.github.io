@@ -4,19 +4,23 @@ import { Experience } from "../../definitions";
 
 interface ExperienceTimelineProps {
   experiences: Experience[];
-  setHighlightedSkills: (skills: number[]) => void;
+  selectedExperience: number;
+  setSelectedExperience: (i: number) => void;
 }
 
 export const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({
   experiences,
-  setHighlightedSkills,
+  selectedExperience,
+  setSelectedExperience,
 }) => (
-  <Timeline>
+  <Timeline
+    selected={selectedExperience}
+    setSelected={setSelectedExperience}
+  >
     {experiences.map((experience, index) => (
       <ExperienceCard
         key={index}
         experience={experience}
-        setHighlightedSkills={setHighlightedSkills}
       />
     ))}
   </Timeline>

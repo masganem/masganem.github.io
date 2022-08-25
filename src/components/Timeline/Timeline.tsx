@@ -5,11 +5,16 @@ import { TimelineIndex } from "./TimelineIndex";
 
 interface TimelineProps {
   children: React.ReactElement[];
+  selected: number;
+  setSelected: (i: number) => void;
 }
 
-export const Timeline: React.FC<TimelineProps> = ({children}) => {
+export const Timeline: React.FC<TimelineProps> = ({
+  children,
+  selected,
+  setSelected
+}) => {
   const childrenCount = Children.count(children);
-  const [activeIndex, setActiveIndex] = useState(childrenCount-1);
 
   return (
     <div className={styles.timeline}>
@@ -18,9 +23,9 @@ export const Timeline: React.FC<TimelineProps> = ({children}) => {
           <TimelineIndex
             key={index}
             index={index}
-            currentIndex={activeIndex}
+            currentIndex={selected}
             length={childrenCount}
-            onClick={() => setActiveIndex(index)}  
+            onClick={() => setSelected(index)}  
           />)
         }
       </div>
@@ -28,10 +33,10 @@ export const Timeline: React.FC<TimelineProps> = ({children}) => {
         {children.map((child, index) => (
           <TimelineItem
             index={index}
-            currentIndex={activeIndex}
+            currentIndex={selected}
             length={childrenCount}
             content={child}
-            onClick={() => setActiveIndex(index)}  
+            onClick={() => setSelected(index)}  
           />
         ))}
       </div>

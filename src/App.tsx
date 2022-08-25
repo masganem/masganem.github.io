@@ -9,8 +9,8 @@ import { SkillGrid } from './sections/SkillGrid/SkillGrid';
 import * as styles from "./styles";
 
 function App() {
-  const defaultHighlightedSkills = experiences[experiences.length-1].skills.map(skill => skill.ID);
-  const [highlightedSkills, setHighlightedSkills] = useState<number[]>(defaultHighlightedSkills);
+  const [selectedExperience, setSelectedExperience] = useState<number>(experiences.length-1);
+  const highlightedSkills = experiences[selectedExperience].skills.map((skill) => skill.ID);
 
   return (
     <div className={styles.app}>
@@ -34,7 +34,7 @@ function App() {
       <br />
       <Heading>Experience</Heading>
       <Small>Select any experience to highlight the skills related to it.</Small>
-      <ExperienceTimeline experiences={experiences} setHighlightedSkills={(skills) => setHighlightedSkills(skills)} />
+      <ExperienceTimeline experiences={experiences} selectedExperience={selectedExperience} setSelectedExperience={(i: number) => setSelectedExperience(i)} />
     </div>
   );
 }
