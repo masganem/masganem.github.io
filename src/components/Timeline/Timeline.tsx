@@ -14,10 +14,33 @@ export const Timeline: React.FC<TimelineProps> = ({
   selected,
   setSelected
 }) => {
+  const MIN_SWIPE_DISTANCE = 100;
+
   const childrenCount = Children.count(children);
+  const [lastTouchX, setlastTouchX] = useState<number | undefined>(undefined);
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    const touchX = e.changedTouches[0].pageX;
+    setlastTouchX(touchX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    const touchX = e.changedTouches[0].pageX;
+    if (lastTouchX !== undefined) {
+      const swipeDistance = touchX - lastTouchX;
+      if (swipeDistance < (-1)*MIN_SWIPE_DISTANCE) {
+        setSelected(selected+1);
+      } else if (swipeDistance > MIN_SWIPE_DISTANCE) {
+        setSelected(selected-1);
+      }
+    }
+    setlastTouchX(touchX);
+  };
 
   return (
-    <div className={styles.timeline}>
+    <div className={styles.timeline}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    > 
       <div className={styles.indexes}>
         {children.map((_, index) => 
           <TimelineIndex

@@ -12,6 +12,10 @@ function App() {
   const [selectedExperience, setSelectedExperience] = useState<number>(experiences.length-1);
   const highlightedSkills = experiences[selectedExperience].skills.map((skill) => skill.ID);
 
+  const handleSetSelectedExperience = (i: number) => {
+    if (i >= 0 && i < experiences.length) setSelectedExperience(i)
+  }
+
   return (
     <div className={styles.app}>
       <Heading>Hey there!</Heading>
@@ -34,7 +38,7 @@ function App() {
       <br />
       <Heading>Experience</Heading>
       <Small>Select any experience to highlight the skills related to it.</Small>
-      <ExperienceTimeline experiences={experiences} selectedExperience={selectedExperience} setSelectedExperience={(i: number) => setSelectedExperience(i)} />
+      <ExperienceTimeline experiences={experiences} selectedExperience={selectedExperience} setSelectedExperience={handleSetSelectedExperience} />
     </div>
   );
 }

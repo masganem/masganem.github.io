@@ -11,7 +11,7 @@ interface TimelineItemProps {
 export const TimelineItem: React.FC<TimelineItemProps> = ({index, currentIndex, length, content, onClick}) => {
   const isActive = index === currentIndex;
   return (
-    <div className={styles.shiftItem(index, currentIndex, length)}>
+    <div className={`${styles.shiftItem(index, currentIndex, length)} ${styles.mobileCardShift(currentIndex)}`}>
       <div className={styles.horizontalCarouselItem(isActive)} onClick={onClick}>
         {content}
       </div>

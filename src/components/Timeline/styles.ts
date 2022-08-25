@@ -81,10 +81,18 @@ export const shiftItem = (index: number, currentIndex: number, length: number) =
   `;
 };
 
+export const mobileCardShift = (currentIndex: number) => css`
+  @media (max-width: 768px) {
+    width: 100vw;
+    transform: translate(${(-currentIndex)*100}%);
+  }
+`;
+
 
 export const horizontalCarousel = css`
   display: flex;
   flex-flow: row;
+  width: fit-content;
 `;
 
 
