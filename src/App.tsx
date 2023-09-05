@@ -20,9 +20,8 @@ function App() {
     <div className={styles.app}>
       <Heading>Hey there!</Heading>
       <BaseText>
-        I'm <Link href="https://www.linkedin.com/in/masganem/">Marcelo Ganem</Link>, a Full-stack Developer with a little over 2 years of experience. I'm currently 2/3 through my Computer Information Systems degree
-        at <Link href="https://dcc.ufmg.br/en/">Universidade Federal de Minas Gerais (UFMG)</Link>, working as a Software Engineering Intern at <Link href="https://www.linkedin.com/company/cobli-brasil/">Cobli</Link> and
-        as an Undergraduate Research Assistant at the <Link href="https://dcc.ufmg.br/en/">Computer Science Department</Link> of UFMG.
+        I'm <Link href="https://www.linkedin.com/in/masganem/">Marcelo Ganem</Link>, a Full-stack Developer with a little over 3 years of experience. I'm currently 2/3 through my Computer Information Systems degree
+        at <Link href="https://dcc.ufmg.br/en/">Universidade Federal de Minas Gerais (UFMG)</Link> and working as a Software Engineering Contractor at <Link href="https://www.indeed.com/">Indeed</Link>.
         <br />
         <br />
         Feel free to reach out to me on <Link href="https://www.linkedin.com/in/masganem/">LinkedIn</Link>, check out my <Link href="https://www.github.com/masganem/">GitHub</Link> or judge my musical taste on <Link href="https://open.spotify.com/user/masganmz">Spotify</Link>!

@@ -4,27 +4,27 @@ export const skills: Record<string, Skill> = {
   JavaScript: {
     ID: 0,
     title: "JavaScript",
-    description: "2.5 YOE. Related knowledge: DOM manipulation, bundlers, CSS preprocessing, etc."
+    description: "3.5 YOE. Related knowledge: DOM manipulation, bundlers, CSS preprocessing, etc."
   },
   React: {
     ID: 1,
     title: "React",
-    description: "2 YOE. Also familiar with Redux and Sagas."
+    description: "3 YOE. Also familiar with Redux and Sagas."
   },
   TypeScript: {
     ID: 2,
     title: "TypeScript",
-    description: "1 YOE. Should've started using this earlier!"
+    description: "2 YOE. Should've started using this earlier!"
   },
   SQL: {
     ID: 3,
     title: "SQL",
     description: "1 YOE. Experience with MySQL, PostgreSQL."
   },
-  NoSQL: {
-    ID: 3,
-    title: "NoSQL",
-    description: "1 YOE. A bit of experience with MongoDB."
+  Java: {
+    ID: 4,
+    title: "Java",
+    description: "1 YOE. Experience with Gradle, Spring Boot, JUnit and Mockito."
   },
   GraphQL: {
     ID: 5,

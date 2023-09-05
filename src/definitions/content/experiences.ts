@@ -33,8 +33,15 @@ export const experiences: Experience[] = [
   {
     title: "Software Engineering Intern",
     context: "Cobli - Internship",
-    date: "02/22 - ongoing",
-    description: "Design and building of software solutions in a large microservice ecosystem. I'm currently a part of the Field Operations team, where an extension of Cobli as a product is being built to better fit the targeted market's demands. Work done contemplates active participation in team discussions such as design proposals, SCRUM ceremonies and technical issues, conceptual software architecture and engineering, applying of principles of Domain-driven Design and Event-driven Architecture and, finally, development of software using TypeScript, React, Kotlin, Springboot and GraphQL.",
+    date: "02/22 - 10/22",
+    description: "Design and building of software solutions in a large microservice ecosystem. Work done contemplates active participation in design proposals and SCRUM ceremonies, conceptual software architecture and engineering, applying of principles of Domain-driven Design and Event-driven Architecture and, finally, development of software using TypeScript, React, Kotlin, Springboot and GraphQL.",
     skills: [skills.TypeScript, skills.React, skills.GraphQL]
+  },
+  {
+    title: "Software Engineering Contractor",
+    context: "Indeed - Full Time",
+    date: "10/22 - ongoing",
+    description: "Development and maintenance of software solutions for Indeed's job seeker platform. Work conducted concerns web accessibility; library and technology migrations; code refactoring; test suite improvement (both unit and integration tests on a CI/CD environment).",
+    skills: [skills.TypeScript, skills.React, skills.Java]
   }
 ];
